@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin');
+/*
+IMAGES CREDITS:
+https://data.theotown.com//get_file.php?t=gl&n=2jf03rjje2jh0fmgbrp0k8wonoze1avv_a
+
+https://data.theotown.com//get_file.php?t=gl&n=hx9f4yyzkzto5re5q72wzku4we03vlm6_a
+https://data.theotown.com//get_file.php?t=gl&n=0e1frzirfi3u2lb34nyns1e2g0fxowxk_a
+https://data.theotown.com//get_file.php?t=gl&n=yl4l8nidwxmcns2w402ma31axrx28dhi_a
+https://data.theotown.com//get_file.php?t=gl&n=t4iw8rsi75ri7dwuo1pv9lyywtjh8a2c_a
+https://data.theotown.com//get_file.php?t=gl&n=rokvff929oz0mre2lgf1kfzc4dsqf1iz_a
+
+*/
+
+
+:root {
+  --TTCL-01: #CEE5ED; /*Border*/
+  --TTCL-02: #3D5F6B; /*Background*/
+  --TTCL-03: #60828E; /*Overlay*/
+  --YKCL-01: rgb(247, 247, 255); /* White #f7f7ff */
+  --YKCL-02: rgb(77, 139, 49); /*Dark Green #4d8b31 */
+  --YKCL-03: rgb(221, 232, 185); /*Light Green #dde8b9 */
+  --YKCL-04: rgb(24, 22, 23); /* Black 1 #181617 */
+  --YKCL-05: rgb(45, 43, 44); /*Black 2 #131117 */
+  --YKCL-06: rgb(255, 153, 00); /* Digital Fox orange #ff8427 */
+}
+
+a {
+  color: var(--YKCL-02) !important;
+}
+a:hover:active {
+  color: var(--YKCL-03) !important;
+}
+a:disabled {
+  color: var(--YKCL-06) !important;
+}
+a:visited {
+  color: var(--YKCL-03) !important;
+  text-decoration: none !important;
+}
+
+.bg-bodyyk {
+  background-image: url('IMG/bgimg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #222;
+  padding: 0px !important;
+}
+.bg-navyk {
+  background: linear-gradient(180deg,rgba(0,0,0,0.75),transparent);
+  font-weight: bold;
+}
+.menumain-yk {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0px !important;
+}
+.nav-yk {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.row-yk {
+  width: 40%;
+  margin-right: 8rem;
+  margin-bottom: 0rem;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 1rem;
+}
+.cd {
+  font-family: Monospace;
+  background-color: rgba(0,0,0,0.25);
+}
+.card-yktt {
+  background-color: var(--YKCL-04);
+  border: 2px solid var(--YKCL-05);
+  color: var(--YKCL-01);
+  padding: 1rem;
+}
+.card-yktt .cd {
+  color: var(--YKCL-06);
+}
+.clickable-div {
+  cursor: pointer;
+}
+.ocv-yk {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0,0,0,0.5) !important;
+  backdrop-filter: blur(0.5rem);
+  min-width: 100vw;
+  color: #eee;
+}
+.footer-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  color: #eee;
+  padding: 0.25em;
+}
+.btn-yk {
+  padding: 1rem;
+  padding-top: 0.25rem;
+  text-align: start;
+  width: 100%;
+  color: var(--YKCL-01);
+  min-height: 8vh;
+}
+.btn-yk:hover:active {
+  color: var(--YKCL-02);
+}
+.btn-yk-bg1 {
+  background: linear-gradient(270deg,transparent,rgba(0,0,0,0.5)),url('IMG/bg1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.btn-yk-bg2 {
+  background: linear-gradient(270deg,transparent,rgba(0,0,0,0.5)),url('IMG/bg2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn-yk-bg3 {
+  background: linear-gradient(270deg,transparent,rgba(0,0,0,0.5)),url('IMG/bg3.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn-yk-bg4 {
+  background: linear-gradient(270deg,transparent,rgba(0,0,0,0.5)),url('IMG/bg4.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn-yk-bg5 {
+  background: linear-gradient(270deg,transparent,rgba(0,0,0,0.5)),url('IMG/bg5.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn-yk-bg6 {
+  background: linear-gradient(270deg,transparent,rgba(0,0,0,0.5)),url('IMG/bg6.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+  .menumain-yk {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .row-yk {
+    min-width: 100%;
+    margin-right: 0rem;
+    margin-bottom: 5rem;
+  }
+  .footer-custom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+}
