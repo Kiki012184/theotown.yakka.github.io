@@ -26,256 +26,629 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .cd {
+        background-color: var(--bs-info);
+        font-family: Monospace;
+      }
+      .card-main {
+        max-width: 996px;
+        background-color: rgba(255,255,255,0.8);
+        color: var(--bs-dark);
+        backdrop-filter: blur(1rem);
+      }
+      .bg-yktt {
+        background-image: url('IMG/bg.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
   </head>
-
-  <body class="bg-bodyyk p-0 m-0">
-  <nav class="navbar sticky-top bg-navyk">
-    <div class="container-fluid nav-yk">
-      <div class="container container-sm">
-        <img src="IMG/icon.png" alt="Logo" width="30" class="d-inline-block rounded-3 nav-logo">
-        <p class="text-light nav-brand">Hub Theotown Yakka</p>
+  <body class="bg-dark bg-yktt">
+    <nav class="navbar bg-primary text-light w-100">
+      <div class="container-fluid">
+        <img src="IMG/icon.png" alt="icon" width="36px" class="rounded-3">
+        <span class="navbar-brand mb-0 h1 text-light fw-bold">Hub Theotown Yakka</span>
+      </div>
+    </nav>
+    <div class="card card-sm card-main rounded-3 my-3" >
+      <div class="card-header">
+        <h3> Selamat datang di Hub Theotown <b>Yakka</b>!</h3>
+        <p>Hub Theotown Yakka — Hub dimana Anda akan menemukan tautan komunitas, tutorial, tautan berguna, tutorial pemula, backup data Theotown, dan tutorial plugin oleh Yakka.<br><br>Website tutorial ini dirancang dengan minimal gambar untuk memastikan Anda dapat mengaksesnya dengan hemat kuota internet. Jika Anda memerlukan visualisasi tambahan, saya sarankan untuk menonton video tutorial yang banyak tersedia di <a href="https://youtube.com/">Youtube <i class="bi bi-box-arrow-up-right"></i></a>.</p>
+      </div>
+      <div class="card-body">
+        <h3>Legenda (Warna Tombol):</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item list-group-item-success"><span class="text-success">Hijau</span>: Tautan komunitas. <a href="#" class="btn btn-sm btn-success">Contoh</a></li>
+          <li class="list-group-item list-group-item-info"><span class="text-info">Biru muda</span>: Tutorial Yakka <a href="#" class="btn btn-sm btn-info">Contoh</a></li>
+          <li class="list-group-item list-group-item-primary"><span class="text-primary">Biru tua</span>: Tautan berguna <a href="#" class="btn btn-sm btn-primary">Contoh</a></li>
+          <li class="list-group-item list-group-item-warning"><span class="text-warning">Kuning</span>: Tautan plugin <a href="#" class="btn btn-sm btn-warning">Contoh</a></li>
+        </ul>
+        <p>Untuk memudahkan pencarian informasi, gunakan tombol-tombol yang tersedia di website ini. Setiap tombol telah diberi kode warna sesuai dengan panduan di atas.</b></p>
+        <div class="collapse" id="lnkdc">
+          <div class="card card-body">
+            <h3 class="mb-1">Tautan Discord</h3>
+            <div class="alert alert-danger mb-1" role="alert">
+              <strong>Peringatan:</strong> Mohon diperhatikan bahwa sesuai dengan Undang-Undang Nomor 28 Tahun 2014 tentang Hak Cipta, setiap bentuk distribusi plugin dari server Discord tanpa izin yang sah adalah tindakan yang melanggar hukum. Pelanggaran hak cipta dapat dikenakan sanksi hukum. <br><br>Jika Anda di bawah 13 tahun, jangan bermain Discord, karena itu melanggar TOS mereka!
+            </div>
+            <a href="https://discord.com/" class="btn btn-sm btn-primary mb-1">APK Discord <i class="bi bi-discord"></i></a>
+            <div id="itemList1"></div>
+            <div class="alert alert-info">
+              <h3><i class="bi bi-info-circle"></i> Untuk pemilik server</h3>
+              <p>Apakah anda pemilik server/grup/saluran dan ingin menambahkan atau mengahapus dari daftar ini? Kontak Yakka via Discord atau WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+        <div class="collapse" id="lnkwa">
+          <div class="card card-body">
+            <h3 class="mb-1">Tautan WhatsApp</h3>
+            <a href="https://whatsapp.com/" class="btn btn-sm btn-primary mb-1">APK WhatsApp <i class="bi bi-whatsapp"></i></a>
+            <div id="itemList2"></div>
+            <div class="alert alert-info">
+              <h3><i class="bi bi-info-circle"></i> Untuk pemilik server</h3>
+              <p>Apakah anda pemilik server/grup/saluran dan ingin menambahkan atau mengahapus dari daftar ini? Kontak Yakka via Discord atau WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <h3>Tombol-tombol:</h3>
+        <button class="btn btn-sm btn-success mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#lnkdc" aria-expanded="false" aria-controls="lnkdc"><i class="bi bi-discord"></i> Tautan Server Discord</button>
+        <button class="btn btn-sm btn-success mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#lnkwa" aria-expanded="false" aria-controls="lnkwa"><i class="bi bi-whatsapp"></i> Tautan WhatsApp</button>
+        
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tutzip"><i class="bi bi-file-earmark-zip"></i> Pasang plugin .zip</button>
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tutplu"><i class="bi bi-file-earmark"></i> Pasang plugin .plugin</button>
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tuttpl"><i class="bi bi-file-earmark"></i> Pasang plugin .ttplugin</button>
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tutmpf"><i class="bi bi-file-earmark"></i> Pasang plugin .mpf</button>
+        
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tutwim"><i class="bi bi-map"></i> Impor Wilayah</button>
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tutwex"><i class="bi bi-map"></i> Ekspor Wilayah</button>
+        
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tutsci"><i class="bi bi-building"></i> Impor Kota Satuan</button>
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tutsce"><i class="bi bi-building"></i> Ekspor Kota Satuan</button>
+        
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tutbgm"><i class="bi bi-music-note-beamed"></i> Impor BGM kustom</button>
+        
+        <a href="https://forum.theotown.com/viewforum.php?f=43" class="btn btn-sm btn-primary mb-1"><i class="bi bi-plugin"></i> Plugin Forum</a>
+        <a href="https://forum.theotown.com/viewforum.php?f=82" class="btn btn-sm btn-primary mb-1"><i class="bi bi-book"></i> Wiki Game</a>
+        
+        <button type="button" class="btn btn-sm btn-primary mb-1" data-bs-toggle="modal" data-bs-target="#yulhmp"><i class="bi bi-map"></i> Kota berdasarkan lokasi dunia nyata</button>
+        
+        <a href="https://pca.svetikas.lt/" class="btn btn-sm btn-primary mb-1"><i class="bi bi-plugin"></i> Website PCA</a>
+        <a href="https://theotown.com/forum/viewtopic.php?f=41&t=2965" class="btn btn-sm btn-primary mb-1"><i class="bi bi-plugin"></i> Tutorial Plugin Forum</a>
+        <a href="https://www.youtube.com/playlist?list=PLmac3HPrav-9UWt-ahViIZxpyQxJ2wPSH" class="btn btn-sm btn-primary mb-1"><i class="bi bi-youtube"></i> Playlist menggambar pixel art buat plugin</a>
+        
+        <div id="itemList3"></div>
+        
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tutrdh"><i class="bi bi-plugin"></i> Rekomendasi plugin (By dualHD)</button>
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tutmpp"><i class="bi bi-people"></i> Menaikan Populasi</button>
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tpltpm"><i class="bi bi-info-circle"></i> Tips pemula</button>
+        <button type="button" class="btn btn-sm btn-info mb-1" data-bs-toggle="modal" data-bs-target="#tplhkj"><i class="bi bi-sign-stop-lights"></i> Hierarki jalan</button>
+        <button type="button" class="btn btn-sm btn-info mb-1 disabled" data-bs-toggle="modal" data-bs-target="#tplttl"><i class="bi bi-arrow-clockwise"></i> Theotown lag</button>
+        <button type="button" class="btn btn-sm btn-info mb-1 disabled" data-bs-toggle="modal" data-bs-target="#tplptk"><i class="bi bi-plugin"></i> Plugin tidak muncul di kategori</button>
+        <button type="button" class="btn btn-sm btn-info mb-1 disabled" data-bs-toggle="modal" data-bs-target="#tplper"><i class="bi bi-plugin"></i> Plugin error</button>
+        <button type="button" class="btn btn-sm btn-info mb-1 disabled" data-bs-toggle="modal" data-bs-target="#tplmmf"><i class="bi bi-file-earmark-code"></i> Missing Manifest File</button>
+        <button type="button" class="btn btn-sm btn-info mb-1 disabled" data-bs-toggle="modal" data-bs-target="#tplscy"><i class="bi bi-file-earmark-code"></i> Script Policy</button>
+        <button type="button" class="btn btn-sm btn-info mb-1 disabled" data-bs-toggle="modal" data-bs-target="#tutmpl"><i class="bi bi-plugin"></i> Tutorial Membuat plugin <span class="badge bg-danger rounded-pill">WIP</span></button>
+        <button type="button" class="btn btn-sm btn-info mb-1 disabled" data-bs-toggle="modal" data-bs-target="#tutamp"><i class="bi bi-plugin"></i> APK mebuat plugin </button>
+        <button type="button" class="btn btn-sm btn-info mb-1 disabled" data-bs-toggle="modal" data-bs-target="#tutaose"><i class="bi bi-plugin"></i> AOS Error </button>
+        <button type="button" class="btn btn-sm btn-info mb-1 disabled" data-bs-toggle="modal" data-bs-target="#tutaose"><i class="bi bi-building"></i> DSA </button>
+      </div>
+      <div class="card-footer">
+        <p class="w-100">&copy; Yakka Studios 2019-2024.</p>
+        <p class="mb-2 w-100">
+          <a href="https://youtube.com/@Kiki012-Yakka" class="btn btn-sm btn-outline-dark"><i class="bi bi-youtube"></i></a>
+          <a href="https://instagram.com/kiki012.id" class="btn btn-sm btn-outline-dark"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Kiki012184" class="btn btn-sm btn-outline-dark"><i class="bi bi-github"></i></a>
+          <a href="https://discord.com/invite/PAmzM3Xqbh" class="btn btn-sm btn-outline-dark"><i class="bi bi-discord"></i></a>
+        </p>
       </div>
     </div>
-  </nav>
-    <!-- First Full Body Div -->
-    <div class="container-fluid menumain-yk pt-5">
-      <div class="row row-yk gx-1 gy-1 gx-lg-3 gy-lg-3">
-        <div class="col-6 col-lg-4 clickable-div" data-bs-toggle="offcanvas" data-bs-target="#Tautkomu" aria-controls="Tautkomu">
-          <div class="btn btn-yk btn-yk-bg1">Tautan Komunitas<br><span class="badge bg-info rounded-pill">Diperbarui: 27 Juni 2024</span></div>
-        </div>
-        <div class="col-6 col-lg-4 clickable-div" data-bs-toggle="offcanvas" data-bs-target="#offcanvas2" aria-controls="offcanvas2">
-          <div class="btn btn-yk btn-yk-bg2">Tutorial Yakka<br><span class="badge bg-info rounded-pill">Diperbarui: 4 Juni 2024</span></div>
-        </div>
-        <div class="col-6 col-lg-4 clickable-div" data-bs-toggle="offcanvas" data-bs-target="#offcanvas3" aria-controls="offcanvas3">
-          <div class="btn btn-yk btn-yk-bg3">Tautan Berguna<br><span class="badge bg-info rounded-pill">Diperbarui: 18 Juli 2024</span></div>
-        </div>
-        <div class="col-6 col-lg-4 clickable-div disabled">
-          <div class="btn btn-yk btn-yk-bg4">Tutorial Pemula<br><span class="badge bg-danger rounded-pill">Segera Hadir</span></div>
-        </div>
-        <div class="col-6 col-lg-4 clickable-div disabled">
-          <div class="btn btn-yk btn-yk-bg5">Backup Data Theotown<br><span class="badge bg-danger rounded-pill">Segera Hadir</span></div>
-        </div>
-        <div class="col-6 col-lg-4 clickable-div disabled">
-          <div class="btn btn-yk btn-yk-bg6">Tutorial Plugin Yakka<br><span class="badge bg-danger rounded-pill">Segera Hadir</span></div>
-        </div>
-        <div class="col-12">
-          <div class="card-yktt footer-custom">
-            <p class="w-100">&copy; Yakka Studios 2019-2024. Some images here are copyrighted to Bluefower UG (Theotown).</p>
-            <p class="mb-2 w-100">
-              <a href="https://youtube.com/@Kiki012-Yakka" class="btn btn-sm btn-outline-light"><i class="bi bi-youtube"></i></a>
-              <a href="https://instagram.com/kiki012.id" class="btn btn-sm btn-outline-light"><i class="bi bi-instagram"></i></a>
-              <a href="https://github.com/Kiki012184" class="btn btn-sm btn-outline-light"><i class="bi bi-github"></i></a>
-              <a href="https://discord.com/invite/PAmzM3Xqbh" class="btn btn-sm btn-outline-light"><i class="bi bi-discord"></i></a>
-              <a href="https://open.spotify.com/user/31zuydqhavxuig2wm2y3bydwuday?si=fu8EzOAsSa65QNyuRxI7_w" class="btn btn-sm btn-outline-light"><i class="bi bi-spotify"></i></a>
-            </p>
+    
+    <!-- Every modals start here. -->
+    
+    <div class="modal fade" id="tutzip" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-file-earmark-zip"></i> Pasang plugin .zip</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li>Buka folder <span class="cd">download/</span> atau folder manapun dimana anda mengunduh ataupun menyimpan plugin tersebut.</li>
+              <li>Cari file plugin tersebut.</li>
+              <li>Lalu lakukan <b>ekstrak</b> zip tersebut, perlu dicatat jika menggunakan zarchiver, direkomendasikan mengunakan metode ekstrak <b>ekstrak ke ./[nama zip]/</b></li>
+              <li>Salin folder zip plugin tersebut.</li>
+              <li>Tempel folder tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/plugins/[disini]</span></li>
+              <li>Selamat anda telah memasang plugin dengan tipe file zip.</li>
+            </ol>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Offcanvas 1 -->
-    <div class="offcanvas offcanvas-end ocv-yk" tabindex="-1" id="Tautkomu" aria-labelledby="offcanvas1Label">
-      <div class="offcanvas-body">
-        <button type="button" class="btn btn-outline-light w-100 mb-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x"></i></button>
-        <div class="alert alert-danger mb-3" role="alert">
-          <h3><i class="bi bi-exclamation-triangle"></i> Sebelum share plugin!</h3>
-          Ingat ya, plugin yang diunduh dari server-server di bawah ini dilarang disebarkan tanpa izin pemilik/pembuat. Sesuai dengan undang-undang hak cipta Indonesia (UU No. 28 Tahun 2014 tentang Hak Cipta), pelanggaran dapat dikenakan denda hingga Rp 1 miliar dan pidana penjara hingga 10 tahun. Juga perlu diingat, baca peraturan setiap server yang ada di bawah ini, karena setiap server memiliki peraturan yang berbeda. Jadi lebih baik share tautan website ini atau server discord mereka.
-        </div>
-        <div class="alert alert-info mb-3">
-          <h3><i class="bi bi-info-circle"></i> Cara memasang</h3>
-          Bingung cara memasang? Bisa cek bagian tutorial ya.
-        </div>
-        <h3><i class="bi bi-discord"></i> Server <a href="https://discord.com/">Discord</a></h3>
-        <p>Berikut adalah daftar komunitas discord Theotown yang Yakka telah kumpulkan.</p>
-        <table class="w-100 table table-striped table-dark table-bordered rounded-3">
-          <theader>
-            <td>Name</td>
-            <td>Status</td>
-            <td>Link</td>
-          </theader>
-          <tbody id="itemList1">
-          </tbody>
-        </table>
-        <h3><i class="bi bi-whatsapp"></i> Grup/Saluran <a href="https://whatsapp.com/">WhatsApp</a></h3>
-        <table class="w-100 table table-striped table-dark table-bordered rounded-3 mb-3">
-          <theader>
-            <td>Nama</td>
-            <td>Status</td>
-            <td>Tautan</td>
-          </theader>
-          <tbody id="itemList2">
-            <td colspan="3">Segera Hadir!</td>
-          </tbody>
-        </table>
-        <div class="alert alert-info">
-          <h3><i class="bi bi-info-circle"></i> Untuk pemilik server</h3>
-          <p>Apakah anda pemilik server/grup/saluran dan ingin menambahkan atau mengahapus dari daftar ini? Kontak Yakka via Discord atau WhatsApp.</p>
+    <div class="modal fade" id="tutplu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-file-earmark"></i> Pasang plugin .plugin</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li>Buka folder <span class="cd">download/</span> atau folder manapun dimana anda mengunduh ataupun menyimpan plugin tersebut.</li>
+              <li>Cari file plugin tersebut.</li>
+              <li>Salin file plugin tersebut.</li>
+              <li>Tempel file tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/plugins/[disini]</span></li>
+              <li>Selamat anda telah memasang plugin dengan tipe file plugin.</li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Offcanvas 2 -->
-    <div class="offcanvas offcanvas-end ocv-yk" tabindex="-1" id="offcanvas2" aria-labelledby="offcanvas2Label">
-      <div class="offcanvas-body">
-        <button type="button" class="btn btn-outline-light w-100 mb-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x"></i></button>
-        <h3>Tutorial Yakka</h3>
-        <div class="alert alert-info mb-3">
-          <h3><i class="bi bi-info-circle"></i> Disarankan</h3>
-          Disarankan menggunakan aplikasi berikut untuk melakukanya: Zarchiver (<b>Untuk android 9 keatas,perlu akses root atau shizuku.</b>),MT manager,atau Material Files. Serta tutorial ini <b>diperuntukkan khusus perangkat atau gadget android.</b></div>
-        <div class="alert alert-danger mb-3">
-          <h3><i class="bi bi-exclamation-triangle"></i> Penting!</h3>
-          <p>Ada beberapa istilah disini yang mungkin pemula tidak familiar disini,jadi bisa Google istilah tersebut terlebih dahulu sebelum melanjutkan.</p>
-        </div>
-        <h3><i class="bi bi-plug"></i> Plugin</h3>
-        <p>Disini anda dapat mengetahui cara memasang plugin theotown.</p>
-        <div class="alert alert-danger mb-3">
-          <h5><i class="bi bi-exclamation-triangle"></i> PERLU DICATAT DALAM PEMASANGAN PLUGIN DILUAR STORE:</h5>
-          <ol>
-            <li>Tidak semua plugin akan muncul di kategori plugin. Memang, kategori ini memudahkan pemain untuk mencari sesuatu berdasarkan plugin. Namun, plugin di luar store terkadang tidak tercantum di sana. <b>Anda bisa mencari konten plugin di kategori masing-masing. Contohnya, jika plugin berisi dekorasi, carilah di kategori dekorasi game.</b></li>
-            <li><b>Tidak semua plugin kompatibel dengan versi terbaru game.</b> Karena itu, error dan crash bisa terjadi. <b>Jika Anda mengalami error atau crash dan masih pemula, lebih baik hapus saja plugin tersebut.</b> Namun, jika Anda memiliki pemahaman yang cukup, Anda mungkin bisa memodifikasi plugin tersebut agar tidak menyebabkan error atau crash.</li>
-            <li>Peringatan <span class="cd">Missing manifest file.</span> secara sederhana <b>tidak perlu dihiraukan. Namun, perlu dicatat bahwa plugin tanpa plugin manifest tidak dapat digunakan pada wilayah online atau multipemain.</b> Peringatan ini ditujukan kepada pembuat plugin, bukan pemain biasa seperti Anda.</li>
-            <li>Peringatan <span class="cd">Script Policy</span> secara sederhana adalah opsi bagi pemain untuk memilih script plugin mana yang diperbolehkan. Beberapa plugin memiliki kode Lua. </li>
-            <li>Plugin error ketika di muat pertama kali adalah pertanda buruk,anda hanya dapat menghapusnya,karena plugin ini error karena pembuatnya yang lalai dan tidak teliti pada kodenya.</li>
-          </ol>
-        </div>
-        <div class="card-yktt mb-3">
-          <h5><i class="bi bi-file-zip"></i> Cara memasang plugin dengan tipe file <span class="cd">nama file.zip</span>:</h5>
-          <ol>
-            <li>Buka folder <span class="cd">download/</span> atau folder manapun dimana anda mengunduh ataupun menyimpan plugin tersebut.</li>
-            <li>Cari file plugin tersebut.</li>
-            <li>Lalu lakukan <b>ekstrak</b> zip tersebut, perlu dicatat jika menggunakan zarchiver, direkomendasikan mengunakan metode ekstrak <b>ekstrak ke ./[nama zip]/</b></li>
-            <li>Salin folder zip plugin tersebut.</li>
-            <li>Tempel folder tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/plugins/[disini]</span></li>
-            <li>Selamat anda telah memasang plugin dengan tipe file zip.</li>
-          </ol>
-        </div>
-        <div class="card-yktt mb-3">
-          <h5><i class="bi bi-file-earmark"></i> Cara memasang plugin dengan tipe file <span class="cd">nama file.plugin</span>:</h5>
-          <ol>
-            <li>Buka folder <span class="cd">download/</span> atau folder manapun dimana anda mengunduh ataupun menyimpan plugin tersebut.</li>
-            <li>Cari file plugin tersebut.</li>
-            <li>Salin file plugin tersebut.</li>
-            <li>Tempel file tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/plugins/[disini]</span></li>
-            <li>Selamat anda telah memasang plugin dengan tipe file plugin.</li>
-          </ol>
-        </div>
-        <div class="card-yktt mb-3">
-          <h5><i class="bi bi-file-earmark"></i> Cara memasang plugin dengan tipe file <span class="cd">nama file.mpf</span>:</h5>
-          <ol>
-            <li>Buka folder <span class="cd">download/</span> atau folder manapun dimana anda mengunduh ataupun menyimpan plugin tersebut.</li>
-            <li>Cari file plugin tersebut.</li>
-            <li>Salin file plugin tersebut.</li>
-            <li>Tempel file tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/managed plugins/[disini]</span></li>
-            <li>Selamat anda telah memasang plugin dengan tipe file mpf.</li>
-          </ol>
-        </div>
-        <h3><i class="bi bi-map"></i> Wilayah</h3>
-        <p>Disini anda dapat mengetahui cara impor dan ekspor wilayah.</p>
-        <div class="card-yktt mb-3">
-          <h5><i class="bi bi-map"></i> Cara impor wilayah game:</h5>
-          <ol>
-            <li>Buka folder <span class="cd">download/</span> atau folder manapun dimana anda mengunduh ataupun menyimpan wilayah tersebut.</li>
-            <li>Cari file wilayah tersebut.</li>
-            <li>Lalu lakukan <b>ekstrak</b> zip tersebut, perlu dicatat jika menggunakan zarchiver, direkomendasikan mengunakan metode ekstrak <b>ekstrak ke ./[nama zip]/</b></li>
-            <li>Salin folder zip wilayah tersebut.</li>
-            <li>Tempel folder tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/regions/[disini]</span></li>
-            <li>Selamat anda telah mengimpor wilayah anda.</li>
-          </ol>
-        </div>
-        <div class="card-yktt mb-3">
-          <h5><i class="bi bi-map"></i> Cara ekspor wilayah game:</h5>
-          <ol>
-            <li>Pergi ke direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/regions/[disini]</span></li>
-            <li>Pilih folder wilayah yang kamu ingin ekspor.</li>
-            <li>Salin folder wilayah tersebut ke folder manapun diluar direktori <span class="cd">android/data/...</span></li>
-            <li>Setelah disalin,kompress folder wilayah tersebut.</li>
-            <li>(Opsional) Setelah dikompres,hapus folder wilayah.</li>
-            <li>Selamat anda telah berhasil mengekspor wilayah theotown.</li>
-          </ol>
-        </div>
-        <h3><i class="bi bi-building"></i> Kota Satuan</h3>
-        <p>Disini anda dapat mengetahui cara impor dan ekspor kota satuan.</p>
-        <div class="alert alert-info mb-3">
-          Tipe file <b>kota satuan</b> adalah <span class="cd">nama file.city</span>,ada juga <span class="cd">nama file.city.store</span> yang tidak diperlukan dalam tutorial ini,juha ada <span class="cd">nama file.city.backup</span> yang disarankan untuk juga di ekspor jika perlu.
-        </div>
-        <div class="card-yktt mb-3">
-          <h5><i class="bi bi-building"></i> Cara impor kota satuan game:</h5>
-          <ol>
-            <li>Buka folder <span class="cd">download/</span> atau folder manapun dimana anda mengunduh ataupun menyimpan kota satuan tersebut.</li>
-            <li>Cari file kota satuan tersebut.</li>
-            <li>Salin file kota satuan tersebut.</li>
-            <li>Tempel file tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/maps/[disini]</span></li>
-            <li>Selamat anda telah mengimpor kota satuan anda.</li>
-          </ol>
-        </div>
-        <div class="card-yktt mb-3">
-          <h5><i class="bi bi-building"></i> Cara ekspor kota satuan game:</h5>
-          <ol>
-            <li>Pergi ke direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/maps/[disini]</span></li>
-            <li>Pilih file kota satuan yang kamu ingin ekspor.</li>
-            <li>Salin file kota satuan tersebut ke folder manapun diluar direktori <span class="cd">android/data/...</span></li>
-            <li>Selamat anda telah berhasil mengekspor kota satuan theotown.</li>
-          </ol>
-        </div>
-        <h3><i class="bi bi-music-note-beamed"></i> Musik</h3>
-        <p>Disini anda dapat mengetahui cara untuk menambahkan musik kustom theotown.</p>
-        <div class="alert alert-warning mb-3">
-          Untuk saat ini hanya mendukung tipe file musik <span class="cd">mp3</span>. Selain itu tidak akan diputar oleh game.
-        </div>
-        <div class="card-yktt mb-3">
-          <h5><i class="bi bi-music-note-beamed"></i> Cara pasang musik kustom game:</h5>
-          <ol>
-            <li>Cari file musik/lagu yang di inginkan</li>
-            <li>Salin file musik/lagu tersebut</li>
-            <li>Tempel file tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/music/[disini]</span></li>
-            <li>Selamat anda telah memasang musik/lagu sendiri.</li>
-          </ol>
-        </div>
-        <div class="alert alert-warning mb-3">
-          Ada 3 musik/lagu bawaan game yang tidak dapat di hapus,lainnya anda dapat menghapusnya. ketiga lagu ini memang sudah dimasukan ke apk game.<br><br>Jika musik bawaan yang dihapus muncul lagi,anda bisa pergi ke pengaturan game,lalu lainnya,lalu matikan <b>unduh file statis</b><br><br>Folder <span class="cd">emergency/</span> di dalam folder <span class="cd">music/</span> adalah music yang akan diggunakan ketika kota anda dalam keadaan darurat,seperti kebakaran,meteor,tornado,dll.
+    <div class="modal fade" id="tuttpl" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-file-earmark"></i> Pasang plugin .ttplugin</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li>Buka folder <span class="cd">download/</span> atau folder manapun dimana anda mengunduh ataupun menyimpan plugin tersebut.</li>
+              <li>Cari file plugin tersebut.</li>
+              <li>Salin file plugin tersebut.</li>
+              <li>Tempel file tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/plugins/[disini]</span></li>
+              <li>Selamat anda telah memasang plugin dengan tipe file ttplugin.</li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Offcanvas 3 -->
-    <div class="offcanvas offcanvas-end ocv-yk" tabindex="-1" id="offcanvas3" aria-labelledby="offcanvas3Label">
-      <div class="offcanvas-body">
-        <button type="button" class="btn btn-outline-light w-100 mb-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x"></i></button>
-        <h3>Tautan Berguna</h3>
-        <div class="card-yktt mb-3">
-          <h5><i class="bi bi-calendar"></i> Forum</h5>
-          <p>Tautan plugin forum: <a href="https://forum.theotown.com/viewforum.php?f=43">Klik Disini</a></p>
-          <div class="alert alert-warning"><b>Catatan:</b> Jangan sampai pencet <b>Plugin store <i class="bi bi-plug-fill"></i></b>. Itu bisa di download di game,kalau disitu memang tidak bisa (kecuali yang bikin plugin sendiri).</div>
-          <p>Tautan wiki game forum: <a href="https://forum.theotown.com/viewforum.php?f=82">Klik Disini</a></p>
-        </div>
-        <div class="card-yktt mb-3">
-          <h5><i class="bi bi-map"></i> Peta</h5>
-          <p>Tautan website membuat peta berdasarkan tempat nyata: <a href="https://tangrams.github.io/heightmapper/">Klik Disini</a></p>
-          <div class="alert alert-warning"><b>Catatan:</b> Tinggal pencet screenshoot (Tombol power + volume bawah)</div>
-        </div>
-        <div class="card-yktt mb-3">
-          <h5><i class="bi bi-plug"></i> Membuat Plugin</h5>
-          <p>Tautan membuat plugin <b>(Tanpa koding,namun masih perlu menggambar)</b>: <a href="https://pca.svetikas.lt/">Klik Disini</a></p>
-          <p>Tautan tutorial plugin forum: <a href="https://theotown.com/forum/viewtopic.php?f=41&t=2965">Klik Disini</a></p>
-          <p>Playlist tutorial menggambar plugin: <a href="https://www.youtube.com/playlist?list=PLmac3HPrav-9UWt-ahViIZxpyQxJ2wPSH">Klik Disini</a></p>
-        </div>
-        <div class="alert alert-danger mb-3" role="alert">
-          <h3><i class="bi bi-exclamation-triangle"></i> Sebelum share plugin!</h3>
-          Ingat ya, plugin yang diunduh dari sumber di bawah ini dilarang disebarkan tanpa izin pemilik/pembuat. Sesuai dengan undang-undang hak cipta Indonesia (UU No. 28 Tahun 2014 tentang Hak Cipta), pelanggaran dapat dikenakan denda hingga Rp 1 miliar dan pidana penjara hingga 10 tahun. Jadi lebih baik share tautan website ini atau tautan orisinil & resmi mereka.
-        </div>
-        <div class="card-yktt mb-3">
-          <h5><i class="bi bi-plug"></i> Plugins (Berdasakan Pembuat)</h5>
-          <p>Age of Sail Resmi: <a href="https://github.com/TPhil-Corp/Age-of-Sail/releases">Klik Disini</a> Pokok download yang tipe filenya <span class="cd">.plugin</span>.</p>
-          <p>Tautan plugin mdk_813: <a href="https://forum.theotown.com/search.php?author_id=922&fid%5B%5D=43&sc=1&sr=topics&sk=t&sf=firstpost">Klik Disini</a></p>
-          <p>Tautan plugin yusuf: <a href="https://drive.google.com/drive/folders/1OpRpSXAwFvQhtjEGxmUQA0QjwUWPdNCq">Klik Disini</a></p>
-          <p>Tautan plugin rockfort: <a href="https://forum.theotown.com/search.php?author_id=4615&fid%5B%5D=43&sc=1&sr=topics&sk=t&sf=firstpost">Klik Disini</a></p>
-          <p>Tautan plugin kingtut10101: <a href="https://github.com/KINGTUT10101/TheoTownPlugins">Klik Disini</a> Plugin tangga didapatkan disini (Nama: Pedestrian Expansion).</p>
-          <p>Tautan Plugin chipper: <a href="https://forum.theotown.com/viewtopic.php?t=25687">Klik Disini</a> Plugin <b>people and props</b> terbaru tersedia disini. Serta beberapa plugin yah belum ia rilis.</p>
-          <p>Tautan Plugin Complex Industry: <a href="https://discord.gg/9cxRBhkWmG">Klik Disini</a> aka Plugin decal pelabuhan.</p>
-          <p>Tautan plugin Some Beach Decorations: <a href="https://forum.theotown.com/viewtopic.php?t=11222">Klik Disini</a> aka plugin ombak.</p>
+    <div class="modal fade" id="tutmpf" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-file-earmark"></i> Pasang plugin .mpf</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li>Buka folder <span class="cd">download/</span> atau folder manapun dimana anda mengunduh ataupun menyimpan plugin tersebut.</li>
+              <li>Cari file plugin tersebut.</li>
+              <li>Salin file plugin tersebut.</li>
+              <li>Tempel file tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/managed plugins/[disini]</span></li>
+              <li>Selamat anda telah memasang plugin dengan tipe file mpf.</li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
+    
+    <div class="modal fade" id="tutwim" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-map"></i> Impor wilayah</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li>Buka folder <span class="cd">download/</span> atau folder manapun dimana anda mengunduh ataupun menyimpan wilayah tersebut.</li>
+              <li>Cari file wilayah tersebut.</li>
+              <li>Lalu lakukan <b>ekstrak</b> zip tersebut, perlu dicatat jika menggunakan zarchiver, direkomendasikan mengunakan metode ekstrak <b>ekstrak ke ./[nama zip]/</b></li>
+              <li>Salin folder zip wilayah tersebut.</li>
+              <li>Tempel folder tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/regions/[disini]</span></li>
+              <li>Selamat anda telah mengimpor wilayah anda.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="tutwex" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-map"></i> Ekspor wilayah</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li>Pergi ke direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/regions/[disini]</span></li>
+              <li>Pilih folder wilayah yang kamu ingin ekspor.</li>
+              <li>Salin folder wilayah tersebut ke folder manapun diluar direktori <span class="cd">android/data/...</span></li>
+              <li>Setelah disalin,kompress folder wilayah tersebut.</li>
+              <li>(Opsional) Setelah dikompres,hapus folder wilayah.</li>
+              <li>Selamat anda telah berhasil mengekspor wilayah theotown.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="tutsci" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-building"></i> Impor kota satuan</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li>Buka folder <span class="cd">download/</span> atau folder manapun dimana anda mengunduh ataupun menyimpan kota satuan tersebut.</li>
+              <li>Cari file kota satuan tersebut.</li>
+              <li>Salin file kota satuan tersebut.</li>
+              <li>Tempel file tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/maps/[disini]</span></li>
+              <li>Selamat anda telah mengimpor kota satuan anda.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="tutsce" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-map"></i> Ekspor kota satuan</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li>Pergi ke direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/maps/[disini]</span></li>
+              <li>Pilih file kota satuan yang kamu ingin ekspor.</li>
+              <li>Salin file kota satuan tersebut ke folder manapun diluar direktori <span class="cd">android/data/...</span></li>
+              <li>Selamat anda telah berhasil mengekspor kota satuan theotown.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="tutbgm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-music-note-beamed"></i> Impor BGM</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-warning mb-3">
+              Untuk saat ini hanya mendukung tipe file musik <span class="cd">mp3</span>. Selain itu tidak akan diputar oleh game.
+            </div>
+            <ol>
+              <li>Cari file musik/lagu yang di inginkan</li>
+              <li>Salin file musik/lagu tersebut</li>
+              <li>Tempel file tersebut di direktori file berikut: <span class="cd">android/data/info.flowersoft.theotown.theotown/files/music/[disini]</span></li>
+              <li>Selamat anda telah memasang musik/lagu sendiri.</li>
+            </ol>
+            <div class="alert alert-warning mb-3">
+              Ada 3 musik/lagu bawaan game yang tidak dapat di hapus,lainnya anda dapat menghapusnya. ketiga lagu ini memang sudah dimasukan ke apk game.<br><br>Jika musik bawaan yang dihapus muncul lagi,anda bisa pergi ke pengaturan game,lalu lainnya,lalu matikan <b>unduh file statis</b><br><br>Folder <span class="cd">emergency/</span> di dalam folder <span class="cd">music/</span> adalah music yang akan diggunakan ketika kota anda dalam keadaan darurat,seperti kebakaran,meteor,tornado,dll.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="yulhmp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-map"></i> Kota berdasarkan lokasi dunia nyata</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Tutorial segera hadir!</p>
+          </div>
+          <div class="modal-footer">
+            <a href="https://tangrams.github.io/heightmapper/" class="btn btn-primary">Kunjugi website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ERROR AOS -->
+    <div class="modal fade" id="tplaos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-plugin"></i> PERINGATAN!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="copyright-alert"></div>
+            <div class="alert alert-warning">
+              <h5>Bagi yang Mengalami Error pada Plugin AOS, Baca Ini!</h5>
+              Jika Anda menggunakan plugin AOS di TheoTown versi 1.11.78 atau lebih tinggi, mungkin Anda mengalami error.<br><br>
+              <b>Mengapa ini terjadi?</b><br>
+              Pengembang TheoTown telah membuat perubahan besar pada kode hak istimewa plugin di versi terbaru, sehingga plugin lama menjadi tidak kompatibel dengan versi terbaru, yang menyebabkan error.<br><br>
+              <b>Apakah ada solusinya?</b><br>
+              Ya, tetapi hanya ada satu pilihan sulit: gunakan TheoTown versi sebelum 1.11.78. Namun, perlu diingat bahwa jika Anda melakukannya, Anda tidak akan mendapatkan konten TheoTown terbaru.<br><br>
+              <b>Apakah AOS akan di-update, dan kapan?</b><br>Tidak, plugin AOS tidak akan di-update. Pengembang plugin AOS sudah pensiun dari pengembangan plugin TheoTown sejak tahun 2022. Mohon pengertiannya, jika Anda memiliki kontak dengan pengembang tersebut, bahwa mereka berhak menolak permintaan Anda, jadi jangan kecewa.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="https://github.com/TPhil-Corp/Age-of-Sail/releases" class="btn btn-warning"><i class="bi bi-check-circle"></i> Saya telah membaca teks diatas dan memahaminya.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="tutrdh" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-plugin"></i> Rekomendasi plugin DualHD</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            List of Plugins DualHD use (note: if you can't find some then they may be private or have been deleted):
+            <ul>
+              <li>German Houses | by vönark (vps server)</li>
+              <li>Munich Airport | by vönark (vps server)</li>
+              <li>Austrian Buildings | by vönark (vps server)</li>
+              <li>Saint Petersburg Buildings v2 | by vönark (vps server)</li>
+              <li>Dutch buildings | by vönark (vps server)</li>
+              <li>NewBau | by vönark (vps server)</li>
+              <li>Swedish buildings | by vönark (vps server)</li>
+              <li>La Defense | by vönark (vps server)</li>
+              <li>White Square | by vönark (vps server)</li>
+              <li>Turning Torso | by vönark (vps server)</li>
+              <li>Modern (euro) building pack | by Some SC4 Fan (Plugin store)</li>
+              <li>Amsterdam Prinsengracht | by a Dutch Guy (forum)</li>
+              <li>Moscow historical buildings | by arangasit (Plugin store)</li>
+              <li>Verona historical buildings | by arangasit (Plugin Store)</li>
+              <li>Le Havre panel buildings | by arangasit (Plugin store)</li>
+              <li>Copenhagen historica buildings | by arangasit (Plugin Store)</li>
+              <li>Soviet residential buildings | by arangasit (Plugin store)</li>
+              <li>Le Havre MegaPack | by RockFort (forum)</li>
+              <li>French Buildings Pack (2.1.2) | by RockFort (forum)</li>
+              <li>French Houses Pack #2 | by RockFort (forum)</li>
+              <li>Palais Bénédictine | by RockFort (forum)</li>
+              <li>Warsaw Palace of Culture and Science | by RockFort (forum)</li>
+              <li>French Elementary School | by RockFort (forum)</li>
+              <li>French Public Housing Projects Pack | by RockFort (forum)</li>
+              <li>Musée des Pêcheries, Fécamp | by RockFort (forum)</li>
+              <li>Modulable French House | by RockFort (forum)</li>
+              <li>Mairie de Fécamp | by RockFort (forum)</li>
+              <li>Gare de Rouen Rive-Droite | by RockFort (forum)</li>
+              <li>Netherlands Middle School | by RockFort (forum)</li>
+              <li>Saint Nicolas Church, Ljubljana | by RockFort (forum)</li>
+              <li>Western Railway Station, Budapest | by RockFort (forum)</li>
+              <li>Eco-Towers pack (Occitanie Tower) | by RockFort (forum)</li>
+              <li>Notre Dame de Paris Cathedral | by RockFort (forum)</li>
+              <li>THE SHARD | by Dekuz (Plugin store)</li>
+              <li>De Rotterdam | by Dekuz (Plugin store)</li>
+              <li>Wohnpark Alt-Erlaa | by Dekuz (Plugin store)</li>
+              <li>Guggenheim museum bilbao | by Dekuz (Plugin store)</li>
+              <li>Modern Building Package | by Dekuz (Plugin store)</li>
+              <li>Hungarian auto club HQ | by Dekuz (Plugin store)</li>
+              <li>Winter Palace | by võnark (vps server)</li>
+              <li>Frankfurt building pack | by võnark (vps server)</li>
+              <li>City of London pack | by võnark (vps server)</li>
+              <li>Churches | by võnark (Plugin store)</li>
+              <li>Westminster Palace | by CERRERA (Plugin store)</li>
+              <li>Palace Potocki | by Österschmirtz (Plugin store)</li>
+              <li>Oslo Royal Palace | by Österschmirtz (Plugin store)</li>
+              <li>Victorian Train Station | by Österschmirtz (Plugin store)</li>
+              <li>Tour des Archives, Rouen | by Imran M (Plugin store)</li>
+              <li>Munich New City Hall | by TCPS TEAM (Plugin store)</li>
+              <li>Gothic Cathedral | by TCPS TEAM (Plugin store)</li>
+              <li>Jakarta Cathedral | by Lukasbeenhere (Plugin store)</li>
+              <li>Parliament of Budapest | by kekman (Plugin store)</li>
+              <li>Messeturm Frankfurt | by kekman (Plugin store)</li>
+              <li>Floreasca Sky Tower Bucuresti | by kekman (Plugin store)</li>
+              <li>Cologne Cathedral | by kekman (Plugin store)</li>
+              <li>Modulable Shopping Centre | by Ttownlover (Plugin store)</li>
+              <li>PWC HQ. Oslo | by Ttownlover (Plugin store)</li>
+              <li>Warsaw Trade Tower | by Marco Handres (Plugin Store)</li>
+              <li>Hotel Intercontinental Warsaw | by Marco Handres (Plugin store)</li>
+              <li>The Crystal Palace | by tochiito (Plugin store)</li>
+              <li>Cinerama Movie Theatre | by tochiito (Plugin store)</li>
+              <li>The Wedding Tower | by tochiito (Plugin store)</li>
+              <li>The Leaf Factory Pack | by The Leaf (LPC server)</li>
+              <li>The Leaf Construction Props Pack | by The Leaf (LPC server)</li>
+              <li>PBZ Bank | by KMr06 (Plugin store)</li>
+              <li>The Landmark | by KMr06 (Plugin store)</li>
+              <li>The MARQ | by KMr06 (Plugin store)</li>
+              <li>Estella tower | by KMr06 (Plugin store)</li>
+              <li>CJ Tower | by KMr06 (Plugin store)</li>
+              <li>VN-PRDC | by KMr06 (Plugin store)</li>
+              <li>The Landmark | by KMr06 (Plugin store)</li>
+              <li>International Financial Center | by KMr06 (Plugin store)</li>
+              <li>Rietpark Building | by Walmart Employee (Plugin store)</li>
+              <li>Thamrin Nine Tower | by NTTPC (Plugin store)</li>
+              <li>Astra Tower | by matthewfilbert15 (Plugin store)</li>
+              <li>Prague Buildings | by zaaron (LPC server)</li>
+              <li>National Diet Library | by zaaron (Plugin store)</li>
+              <li>Kaunas Town Hall | by zaaron (Plugin store)</li>
+              <li>Fischauktionshalle | by zaaron (Plugin store)</li>
+              <li>Service Expansion | by Lobby (Plugin store)</li>
+              <li>European Buildings Expansion | by Lobby (Plugin store)</li>
+              <li>Residential Expansion | by Lobby (Plugin store)</li>
+              <li>Kulche's Advanced Architecture | by Kulche (Plugin store)</li>
+              <li>The Maj Dago | by RM0419 (Plugin store)</li>
+              <li>brussels buildings | by ifeelgood (Plugin store)</li>
+              <li>soviet buildings | by ifeelgood (Plugin store)</li>
+            </ul>
+            <hr>
+            <p>Roads related plugins DualHD use.<br>Road decorations:</p>
+            <ul>
+              <li>Traffic Lights</li>
+              <li>Slow Traffic Package</li>
+              <li>Road Markings Package</li>
+              <li>Curb plugin</li>
+              <li>Indonesia transport pack (for the lines)</li>
+              <li>LeoPolis Road Deco Pack</li>
+              <li>Road stripes (Forum)</li>
+              <li>Alpha Mega DanDM Plugin (Potato Server)</li>
+              <li>Advanced Road</li>
+              <li>Road stripes</li>
+              <li>Diagonal Crossing</li>
+              <li>Red line</li>
+              <li>(one way)street light</li>
+              <li>road sign</li>
+              <li>Roadside Trees</li>
+              <li>Road damages</li>
+              <li>Leopolis Road Deco Pack (Beta)</li>
+              <li>Non-Stopping Strips. Crossings</li>
+            </ul>
+            <p>Road plugins:</p>
+            <ul>
+              <li>i13 Road Pack</li>
+              <li>Philippines Road Pack</li>
+              <li>Custom Roads</li>
+              <li>Erin's Road Additions</li>
+              <li>Cobblestone roads (Forum)</li>
+              <li>One-way diagonals (DM me for the files, the author is perfectly fine with sharing it)</li>
+              <li>Complex industries (for the dirt roads)</li>
+              <li>Bus Lane</li>
+              <li>Invisible road</li>
+              <li>One lane street</li>
+              <li>Bike lane</li>
+              <li>Bridge highway and expressway</li>
+              <li>Alley</li>
+              <li>New Interchanges And Road v1.7</li>
+              <li>Futuristic Road Pack V5.1</li>
+              <li>School Zone Road</li>
+              <li>Mud Tracks</li>
+              <li>One Lane roads</li>
+              <li>Rural Roads (Diagonal)</li>
+            </ul>
+            <p>Misc Road related plugins :</p>
+            <ul>
+              <li>River with sidewalk</li>
+              <li>Bus stop decoration updated</li>
+              <li>Bridge decorations</li>
+              <li>Bridge Frames</li>
+            </ul>
+            <hr>
+            <p>Tree/Nature related plugins DualHD use:</p>
+            <ul>
+              <li>Spruce Trees by The26</li>
+              <li>Lilac bushes by The26</li>
+              <li>Birch Trees by The26</li>
+              <li>Rowan Trees by The26</li>
+              <li>Japanese shrine decoration by Kai's work</li>
+              <li>Nature Pack by võnark</li>
+              <li>Autumn Trees by võnark (vps server)</li>
+              <li>Just Trees by Österschmirtz</li>
+              <li>Bus lane by Wikipeder (the trees)</li>
+              <li>Some SC4 Fan's Trees (v2) by Some SC4 Fan's</li>
+            </ul>
+            <h5>Credit to <b>DualHD</b></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="tutmpp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-people"></i> Menaikan Populasi</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="https://placehold.co/400" alt="">
+            <p><b>Ketuk kotak yang ada di gambar (ditunjukkan dengan panah).</b> Setelah itu, tampilan yang ada di gambar kedua akan muncul. Tampilan ini menunjukkan permintaan zona di kotamu:</p>
+            <ul class="list-group list-group-flush my-1">
+              <li class="list-group-item list-group-item-success"><b>Hijau</b> Permintaan untuk zona residensial.</li>
+              <li class="list-group-item list-group-item-primary"><b>Biru</b> Permintaan untuk zona komersial.</li>
+              <li class="list-group-item list-group-item-warning"><b>Kuning</b> Permintaan untuk zona industri (termasuk kebun dan pelabuhan).</li>
+            </ul>
+            <p>Jika salah satu dari baris tersebut lebih tinggi dari garis tengah, sebaiknya bangun lebih banyak bangunan atau tambahkan zona tersebut. Jika berada di bawah garis tengah, berarti ada penurunan permintaan pada jenis zona tersebut, dan Anda perlu memenuhi beberapa kebutuhan untuk mengembalikan permintaan, jika diinginkan. Hal ini bisa berupa penyediaan tempat kerja, lebih banyak tempat tinggal, atau taman.</p>
+            <p>Pada mode <b>sandbox</b>, Anda dapat menggunakan tombol +/- untuk menambah atau mengurangi permintaan pada suatu baris.
+            <br><br>Selain permintaan untuk listrik, air, dan polisi, bangunan zona memiliki permintaan yang berbeda sesuai tingkatannya:</p>
+            <b>Zona Residensial:</b>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item list-group-item-success"><b>T:</b> Kesehatan</li>
+              <li class="list-group-item list-group-item-success"><b>TT:</b> Kesehatan, Taman, dan Edukasi Rendah.</li>
+              <li class="list-group-item list-group-item-success"><b>TTT:</b> Kesehatan, Taman, Olahraga, Edukasi Rendah, dan Edukasi Tinggi.</li>
+            </ul>
+            <b>Zona Komersial:</b>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item list-group-item-primary"><b>T:</b> Tidak ada.</li>
+              <li class="list-group-item list-group-item-primary"><b>TT:</b> Taman.</li>
+              <li class="list-group-item list-group-item-primary"><b>TTT:</b> Taman dan Olahraga.</li>
+            </ul>
+            <b>Zona Industri</b>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item list-group-item-warning"><b>T & TT:</b> Tidak ada.</li>
+              <li class="list-group-item list-group-item-warning"><b>TTT:</b> Taman.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="tpltpm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-check-circle"></i> Tips Pemula</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <b>Tips Pemula TheoTown:</b>
+            <ol>
+              <li>Jangan habiskan diamond untuk plugin, simpan untuk kebutuhan penting. Ikuti event giveaway di grup ini untuk menambah diamond.</li>
+              <li>Penuhi kebutuhan penduduk kotamu. Pahami permintaan zona (demands) dan tingkatannya (miskin, menengah, kaya). Untuk mengulang tutorial, reset kota awal (Stuckenborstel, Theonia).</li>
+              <li>Eksplorasi game dengan mencoba berbagai fitur.</li>
+              <li>Atur game sesuai kebutuhan melalui pengaturan.</li>
+              <li>Ingin plugin tapi tanpa diamond? Cek forum!</li>
+              <li>Plugin error? Hapus file plugin yang bermasalah.</li>
+              <li>Jangan langsung buat DSA (roket) tanpa memahami mekaniknya.</li>
+              <li>Hindari terlalu banyak plugin; bisa menyebabkan error dan tergantung spesifikasi HP.</li>
+              <li>Bedakan konten plugin dengan bawaan game!</li>
+              <li>Bergabunglah di forum dan Discord resmi TheoTown untuk informasi terbaru.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="tplhkj" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-sign-stop-lights"></i> Hierarki Jalan</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><b>Hierarki Jalan</b><br><br>
+            Kota kalian sering macet?<br>
+            Ingin membuat kota kalian lebih estetik?<br><br>
+            Ada caranya! Yaitu dengan mempelajari apa itu hierarki jalan. Dalam dunia nyata, hierarki jalan sangat penting untuk penataan kota, terutama saat membangun kota baru.<br><br>
+            <b>Apa itu hierarki jalan?</b><br>
+            Konsepnya sangat sederhana: jalanan dibagi berdasarkan tingkatan akses dan pergerakan. Sebagai contoh, jalan akses adalah jalan gang, sedangkan jalan pergerakan adalah jalan tol.<br><br>
+            Berikut adalah tingkatan hierarki jalan dari tipe pergerakan hingga akses:</p>
+            <ul>
+              <li><b>Arterial: </b>Jalan utama kota yang padat, minimal memiliki 4 jalur. Jalan ini ditempatkan di lokasi dengan sedikit akses, tetapi dengan banyak pergerakan.</li>
+              <li><b>Kolektor: </b>Jalan kolektor adalah jalan yang berasal dari jalan arterial. Jalan ini menghubungkan jalan akses ke jalan yang lebih besar.</li>
+              <li><b>Lokal: </b>Jalan lokal adalah jalan akses, yang terhubung ke jalan gang atau jalan kolektor yang lebih besar.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="tplttl" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><i class="bi bi-arrow-clockwise"></i> Theotown Lag</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Segera Hadir!
+          </div>
+        </div>
+      </div>
+    </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>

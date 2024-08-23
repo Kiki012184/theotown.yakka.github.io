@@ -105,11 +105,6 @@
         "link":"https://discord.com/invite/xMkh4jm6g5"
     },
     {
-        "name": "Fràncis",
-        "icons":"x-circle",
-        "link":"https://discord.com/invite/VXpPEWAqcA"
-    },
-    {
         "name": "Slavic Principality",
         "icons":"check-circle",
         "link":"https://discord.com/invite/K8jXpH8uA6"
@@ -128,6 +123,26 @@
         "name": "New Slashpotato",
         "icons":"check-circle",
         "link":"https://discord.com/invite/5F3QaQTeMB"
+    },
+    {
+        "name": "Theotown Workshop (Forge)",
+        "icons":"check-circle",
+        "link":"https://discord.gg/D3YseyxQ"
+    },
+    {
+        "name": "KRI (Jefrial)",
+        "icons":"check-circle",
+        "link":"https://discord.com/invite/ymqzpbWtzK"
+    },
+    {
+        "name": "Dionisidbs theotown server",
+        "icons":"check-circle",
+        "link":"https://discord.gg/yuk6Y6GN"
+    },
+    {
+        "name": "The german coalition",
+        "icons":"check-circle",
+        "link":"https://discord.gg/EfeVXv6N"
     },
     {
         "name": "Yakka Plugin Center",

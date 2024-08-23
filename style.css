@@ -24,147 +24,64 @@ https://data.theotown.com//get_file.php?t=gl&n=rokvff929oz0mre2lgf1kfzc4dsqf1iz_
   --YKCL-06: rgb(255, 153, 00); /* Digital Fox orange #ff8427 */
 }
 
-a {
-  color: var(--YKCL-02) !important;
+body {
+  font-family: "Cabin", sans-serif;
 }
-a:hover:active {
-  color: var(--YKCL-03) !important;
+img,
+svg {
+  max-width: 100%;
 }
-a:disabled {
-  color: var(--YKCL-06) !important;
-}
-a:visited {
-  color: var(--YKCL-03) !important;
-  text-decoration: none !important;
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Montserrat",Sans-Serif;
+  font-weight: 700;
 }
 
-.bg-bodyyk {
-  background-image: url('IMG/bgimg.jpg');
-  background-position: center;
-  background-size: cover;
+/* Classes */
+.body-yk {
+  background-color: var(--YKCL-06);
+  font-family: "Cabin", Sans-Serif;
+  background: linear-gradient(rgba(0,0,20,0.45),transparent),url("IMG/bg2.jpg");
   background-repeat: no-repeat;
-  color: #222;
-  padding: 0px !important;
-}
-.bg-navyk {
-  background: linear-gradient(180deg,rgba(0,0,0,0.75),transparent);
-  font-weight: bold;
-}
-.menumain-yk {
+  background-size: cover;
+  background-position: center center;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0px !important;
 }
-.nav-yk {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.row-yk {
-  width: 40%;
-  margin-right: 8rem;
-  margin-bottom: 0rem;
-  background-color: rgba(0,0,0,0.1);
-  border-radius: 1rem;
-}
-.cd {
-  font-family: Monospace;
-  background-color: rgba(0,0,0,0.25);
-}
-.card-yktt {
-  background-color: var(--YKCL-04);
-  border: 2px solid var(--YKCL-05);
+.yk-nav-top {
+  background: linear-gradient(rgba(0,0,20,0.8),transparent);
   color: var(--YKCL-01);
-  padding: 1rem;
 }
-.card-yktt .cd {
-  color: var(--YKCL-06);
-}
-.clickable-div {
-  cursor: pointer;
-}
-.ocv-yk {
-  padding: 0;
-  margin: 0;
-  background-color: rgba(0,0,0,0.5) !important;
-  backdrop-filter: blur(0.5rem);
-  min-width: 100vw;
-  color: #eee;
-}
-.footer-custom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #222;
-  color: #eee;
-  padding: 0.25em;
-}
-.btn-yk {
-  padding: 1rem;
-  padding-top: 0.25rem;
-  text-align: start;
-  width: 100%;
+.yk-nav-bottom {
+  background: linear-gradient(transparent,rgba(0,0,20,0.8));
   color: var(--YKCL-01);
-  min-height: 8vh;
 }
-.btn-yk:hover:active {
-  color: var(--YKCL-02);
+.yk-mcont {
+  height: 80vh;
 }
-.btn-yk-bg1 {
-  background: linear-gradient(270deg,transparent,rgba(0,0,0,0.5)),url('IMG/bg1.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
+.yk-modal {
+  background-color: rgba(200, 200, 220, 0.5);
+  color: rgb(20,20,40);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(1rem);
+  color: var(--YKCL-01);
 }
-.btn-yk-bg2 {
-  background: linear-gradient(270deg,transparent,rgba(0,0,0,0.5)),url('IMG/bg2.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.yk-modal-header {
+  border-bottom: none;
 }
-.btn-yk-bg3 {
-  background: linear-gradient(270deg,transparent,rgba(0,0,0,0.5)),url('IMG/bg3.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.yk-modal-body {
+  min-height: 32vh;
 }
-.btn-yk-bg4 {
-  background: linear-gradient(270deg,transparent,rgba(0,0,0,0.5)),url('IMG/bg4.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.yk-modal-footer {
+  border-top: none;
 }
-.btn-yk-bg5 {
-  background: linear-gradient(270deg,transparent,rgba(0,0,0,0.5)),url('IMG/bg5.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.logo {
+  height: 2em;
+  border-radius: 0.5rem;
 }
-.btn-yk-bg6 {
-  background: linear-gradient(270deg,transparent,rgba(0,0,0,0.5)),url('IMG/bg6.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.fs-alert {
+  font-size: 1em;
 }
-
-@media (max-width: 992px) {
-  .menumain-yk {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  .row-yk {
-    min-width: 100%;
-    margin-right: 0rem;
-    margin-bottom: 5rem;
-  }
-  .footer-custom {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: center;
+@media (min-width:990px) {
+  .yk-modal {
+    border: 1px solid rgb(200,200,220);
   }
 }
