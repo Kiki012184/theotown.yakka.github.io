@@ -1,87 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin');
-/*
-IMAGES CREDITS:
-https://data.theotown.com//get_file.php?t=gl&n=2jf03rjje2jh0fmgbrp0k8wonoze1avv_a
-
-https://data.theotown.com//get_file.php?t=gl&n=hx9f4yyzkzto5re5q72wzku4we03vlm6_a
-https://data.theotown.com//get_file.php?t=gl&n=0e1frzirfi3u2lb34nyns1e2g0fxowxk_a
-https://data.theotown.com//get_file.php?t=gl&n=yl4l8nidwxmcns2w402ma31axrx28dhi_a
-https://data.theotown.com//get_file.php?t=gl&n=t4iw8rsi75ri7dwuo1pv9lyywtjh8a2c_a
-https://data.theotown.com//get_file.php?t=gl&n=rokvff929oz0mre2lgf1kfzc4dsqf1iz_a
-
-*/
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@font-face {
+    font-family: 'rpcm'; /* Name of the font you want to use */
+    src: url('font/zpix.ttf') format('truetype');
+}
 :root {
-  --TTCL-01: #CEE5ED; /*Border*/
-  --TTCL-02: #3D5F6B; /*Background*/
-  --TTCL-03: #60828E; /*Overlay*/
-  --YKCL-01: rgb(247, 247, 255); /* White #f7f7ff */
-  --YKCL-02: rgb(77, 139, 49); /*Dark Green #4d8b31 */
-  --YKCL-03: rgb(221, 232, 185); /*Light Green #dde8b9 */
-  --YKCL-04: rgb(24, 22, 23); /* Black 1 #181617 */
-  --YKCL-05: rgb(45, 43, 44); /*Black 2 #131117 */
-  --YKCL-06: rgb(255, 153, 00); /* Digital Fox orange #ff8427 */
+  --cmdbg: #4b4b4b;
+  --cmdtxt: #f8f8ff;
+  --cmdcmd: #77dd77;
+  --cmdlnk: #ff8347;
+  --cmd404: #ff6961;
+  --cmdnfd: #fdfd96;
+  --cmdinf: #A4d8d8;
+  --cmdft:'Roboto Mono';
+  --cmdfs:12px;
 }
-
 body {
-  font-family: "Cabin", sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--cmdbg); /* Black background for terminal */
+    color: var(--cmdcmd); /* Green text color for terminal look */
+    margin: 0;
+    line-height: 1.2;
+    font-size: var(--cmdfs);
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
-img,
-svg {
-  max-width: 100%;
+div {
+  margin-bottom: 0.5rem;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Montserrat",Sans-Serif;
-  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
-
-/* Classes */
-.body-yk {
-  background-color: var(--YKCL-06);
-  font-family: "Cabin", Sans-Serif;
-  background: linear-gradient(rgba(0,0,20,0.45),transparent),url("IMG/bg2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 100vh;
+table {
+  border: 1px dashed var(--cmdtxt);
+  width: 100%;
 }
-.yk-nav-top {
-  background: linear-gradient(rgba(0,0,20,0.8),transparent);
-  color: var(--YKCL-01);
+hr {
+  background-color: transparent;
+  border: 1px dashed var(--cmdtxt);
 }
-.yk-nav-bottom {
-  background: linear-gradient(transparent,rgba(0,0,20,0.8));
-  color: var(--YKCL-01);
+img,svg,iframe {
+  max-width: 100%;
+  height: auto;
 }
-.yk-mcont {
-  height: 80vh;
+#terminal {
+  font-family: var(--cmdft), monospace;
+  padding: 0.5rem;
+  max-width: 512px;
 }
-.yk-modal {
-  background-color: rgba(200, 200, 220, 0.5);
-  color: rgb(20,20,40);
-  border-radius: 0.5rem;
-  backdrop-filter: blur(1rem);
-  color: var(--YKCL-01);
+#terminal * {
+    font-family: var(--cmdft), monospace;
 }
-.yk-modal-header {
-  border-bottom: none;
+#welcome {
+  margin-bottom: 0.5em;
 }
-.yk-modal-body {
-  min-height: 32vh;
+#output {
+    color: var(--cmdtxt); /* General text color for output */
 }
-.yk-modal-footer {
-  border-top: none;
+.pvcmd {
+    color: var(--cmdcmd); /* Color for previous command */
+    font-size: inherit;
 }
-.logo {
-  height: 2em;
-  border-radius: 0.5rem;
+.error404 {
+    color: var(--cmd404); /* Color for 404 errors */
 }
-.fs-alert {
-  font-size: 1em;
+.errorcmdnf {
+    color: var(--cmdnfd); /* Color for command not found errors */
 }
-@media (min-width:990px) {
-  .yk-modal {
-    border: 1px solid rgb(200,200,220);
-  }
+#input-line {
+  display: flex;
+  align-items: center;
+}
+#prefix {
+  margin-right: 0.5em;
+}
+#user-input {
+  background: none;
+  border: none;
+  color: inherit;
+  width: 100%;
+  font-size: inherit;
+}
+#user-input:focus {
+  outline: none;
+}
+.txtinv {
+  color: var(--cmdbg);
+  background-color: var(--cmdcmd);
+  padding: 0px;
+}
+.cd {
+  color: var(--cmdbg);
+  background-color: var(--cmdtxt);
+}
+.info {
+  color: var(--cmdinf);
+  border: 1px dashed var(--cmdinf);
+  padding: 3px;
+}
+.link {
+  color: var(--cmdlnk);
+}
+.link-list {
+  
+}
+.link-list a{
+  color: var(--cmdlnk);
+  text-decoration: none;
+}
+.link-list a:hover:active:focus {
+  text-decoration: underline;
 }
