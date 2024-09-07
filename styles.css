@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --cmdbg: #4b4b4b;
+  --cmdtxt: #f8f8ff;
+  --cmdlnk: #ff8347;
+}
+
+body {
+  background-color: var(--cmdbg);
+  color: var(--cmdtxt);
+  font-family: 'VT323', monospace;
+  font-size: var(--cmdfs);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.centered-div {
+  text-align: center;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 1px dashed var(--cmdtxt);
+}
+
+h3 {
+  font-weight: 400;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+hr {
+  border: 1px dashed var(--cmdtxt);
+}
+
+a {
+  color: var(--cmdlnk);
+  text-decoration: none;
+}
